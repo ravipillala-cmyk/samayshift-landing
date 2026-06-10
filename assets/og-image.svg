@@ -1,0 +1,23 @@
+<!-- Social share card placeholder (1200x630). Export to og-image.png before launch. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" font-family="Georgia, serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf6ef"/>
+      <stop offset="1" stop-color="#f3ebe0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="85%" cy="10%" r="60%">
+      <stop offset="0" stop-color="#f0b429" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#f0b429" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(90,110)">
+    <circle cx="34" cy="34" r="30" fill="none" stroke="#c9651a" stroke-width="6"/>
+    <path d="M34 16v18l13 8" fill="none" stroke="#c9651a" stroke-width="6" stroke-linecap="round"/>
+    <text x="90" y="48" font-size="46" font-weight="700" fill="#1d1a17">Samay<tspan fill="#c9651a">Shift</tspan></text>
+  </g>
+  <text x="90" y="330" font-size="72" font-weight="700" fill="#1d1a17">Scheduling that respects</text>
+  <text x="90" y="410" font-size="72" font-weight="700" fill="#1d1a17">everyone's <tspan font-style="italic" fill="#c9651a">time.</tspan></text>
+  <text x="90" y="495" font-size="32" fill="#4b443d" font-family="Helvetica, Arial, sans-serif">Mobile-first shift scheduling for small businesses.</text>
+</svg>

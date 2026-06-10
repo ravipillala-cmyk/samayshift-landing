@@ -1,0 +1,72 @@
+<!-- Staff mobile app mockup — "My shifts" with an open shift to claim -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 640" width="320" height="640" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e8842b"/><stop offset="1" stop-color="#c9651a"/>
+    </linearGradient>
+    <filter id="ph" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#281c10" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <!-- phone body -->
+  <rect x="10" y="6" width="300" height="628" rx="44" fill="#1d1a17" filter="url(#ph)"/>
+  <rect x="18" y="14" width="284" height="612" rx="38" fill="#fbf6ef"/>
+  <!-- notch -->
+  <rect x="128" y="22" width="64" height="14" rx="7" fill="#1d1a17"/>
+
+  <!-- header -->
+  <rect x="18" y="36" width="284" height="92" fill="url(#amber)"/>
+  <text x="40" y="74" font-size="13" fill="#fde9d4" font-weight="700" letter-spacing="1">SAMAYSHIFT</text>
+  <text x="40" y="104" font-size="22" fill="#ffffff" font-weight="700">This week</text>
+  <circle cx="276" cy="92" r="16" fill="#ffffff" opacity="0.25"/>
+  <text x="276" y="97" font-size="13" fill="#fff" font-weight="700" text-anchor="middle">AR</text>
+
+  <!-- open shift card (claimable) -->
+  <g>
+    <rect x="34" y="148" width="252" height="92" rx="16" fill="#fff" stroke="#e8842b" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text x="50" y="176" font-size="11" fill="#c9651a" font-weight="700" letter-spacing="1">OPEN SHIFT</text>
+    <text x="50" y="200" font-size="17" fill="#1d1a17" font-weight="700">Fri · 6:00a – 2:00p</text>
+    <text x="50" y="220" font-size="12" fill="#4b443d">Maple St · Barista</text>
+    <rect x="178" y="186" width="92" height="36" rx="18" fill="url(#amber)"/>
+    <text x="224" y="209" font-size="13" fill="#fff" font-weight="700" text-anchor="middle">Claim</text>
+  </g>
+
+  <!-- my shift -->
+  <g>
+    <rect x="34" y="256" width="252" height="78" rx="16" fill="#fff" stroke="#e6dccd"/>
+    <rect x="34" y="256" width="6" height="78" rx="3" fill="#3f7d8c"/>
+    <text x="54" y="284" font-size="16" fill="#1d1a17" font-weight="700">Mon · 8:00a – 4:00p</text>
+    <text x="54" y="306" font-size="12" fill="#4b443d">Maple St · Shift lead</text>
+    <text x="54" y="324" font-size="11" fill="#3f7d8c" font-weight="700">Confirmed</text>
+  </g>
+
+  <!-- swap request -->
+  <g>
+    <rect x="34" y="350" width="252" height="78" rx="16" fill="#fff" stroke="#e6dccd"/>
+    <rect x="34" y="350" width="6" height="78" rx="3" fill="#d9536a"/>
+    <text x="54" y="378" font-size="16" fill="#1d1a17" font-weight="700">Wed · 2:00p – 9:00p</text>
+    <text x="54" y="400" font-size="12" fill="#4b443d">J. Diaz wants to swap</text>
+    <rect x="54" y="408" width="64" height="14" rx="7" fill="#fbe3e8"/>
+    <text x="86" y="419" font-size="9" fill="#d9536a" font-weight="700" text-anchor="middle">PENDING</text>
+  </g>
+
+  <!-- up for grabs -->
+  <g>
+    <rect x="34" y="444" width="252" height="60" rx="16" fill="#f3ebe0"/>
+    <text x="54" y="470" font-size="14" fill="#1d1a17" font-weight="700">Sat · 10a – 6p</text>
+    <text x="54" y="490" font-size="11" fill="#4b443d">You marked this up for grabs</text>
+  </g>
+
+  <!-- bottom tab bar -->
+  <rect x="18" y="560" width="284" height="66" rx="0" fill="#fff"/>
+  <line x1="18" y1="560" x2="302" y2="560" stroke="#e6dccd"/>
+  <g text-anchor="middle">
+    <circle cx="78" cy="586" r="4" fill="#c9651a"/>
+    <text x="78" y="610" font-size="10" fill="#c9651a" font-weight="700">Shifts</text>
+    <text x="160" y="590" font-size="14" fill="#9b9389">◷</text>
+    <text x="160" y="610" font-size="10" fill="#9b9389">Available</text>
+    <text x="242" y="590" font-size="14" fill="#9b9389">☰</text>
+    <text x="242" y="610" font-size="10" fill="#9b9389">More</text>
+  </g>
+</svg>

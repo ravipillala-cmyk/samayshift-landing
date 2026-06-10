@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SamayShift — Scheduling that respects everyone's time</title>
+  <meta name="description" content="Mobile-first shift scheduling for small businesses. Build schedules in minutes, let staff claim and swap shifts, and see every store at a glance. Made for QuickBooks-using teams." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SamayShift — Scheduling that respects everyone's time" />
+  <meta property="og:description" content="Mobile-first shift scheduling for small businesses. Build schedules in minutes; staff claim and swap shifts from their phones." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://samayshift.com" />
+  <meta property="og:image" content="https://samayshift.com/assets/og-image.png" />
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- Display: Fraunces (characterful serif). Body: Public Sans (clean grotesque). -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <a href="#top" class="brand" aria-label="SamayShift home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="2.2"/>
+          <path d="M16 8.5V16l5 3.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-name">Samay<span class="brand-accent">Shift</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#problem">Why</a>
+      <a href="#demo">Demo</a>
+      <a href="#ai">AI</a>
+      <a href="#features">Features</a>
+      <a href="#integrations">Integrations</a>
+      <a href="#pricing">Pricing</a>
+    </nav>
+    <a href="#signup" class="btn btn-primary btn-sm">Start free trial</a>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <p class="eyebrow reveal">Mobile-first shift scheduling</p>
+        <h1 class="hero-title">
+          <span class="reveal" style="--d:1">Scheduling that</span>
+          <span class="reveal" style="--d:2">respects <em>everyone's</em></span>
+          <span class="reveal" style="--d:3">time.</span>
+        </h1>
+        <p class="hero-sub reveal" style="--d:4">
+          Build the week's schedule in minutes. Let your team claim open shifts and
+          swap from their phones. See every store in one place — without the spreadsheet.
+        </p>
+        <div class="hero-cta reveal" style="--d:5">
+          <a href="#signup" class="btn btn-primary">Start free trial</a>
+          <a href="#how" class="btn btn-ghost">See how it works →</a>
+        </div>
+        <p class="trust reveal" style="--d:6">
+          <span class="trust-dot"></span> Built for the small businesses QuickBooks already runs — no scheduling tool included.
+        </p>
+      </div>
+
+      <!-- Hero visual: manager week strip with the staff phone overlapping it -->
+      <div class="hero-visual reveal" style="--d:5" aria-hidden="true">
+        <div class="hero-card">
+          <div class="card-head">
+            <span class="card-title">This week · Maple St.</span>
+            <span class="pill pill-live">Published</span>
+          </div>
+          <div class="week">
+            <div class="day"><span class="dn">Mon</span><div class="chip c1">Open 6a</div><div class="chip c2">A. Rao</div></div>
+            <div class="day"><span class="dn">Tue</span><div class="chip c2">J. Diaz</div><div class="chip c3">Swap?</div></div>
+            <div class="day"><span class="dn">Wed</span><div class="chip c1">Open 2p</div></div>
+            <div class="day"><span class="dn">Thu</span><div class="chip c2">M. Lee</div><div class="chip c2">A. Rao</div></div>
+            <div class="day"><span class="dn">Fri</span><div class="chip c4">Claimed</div><div class="chip c2">K. Smith</div></div>
+          </div>
+          <div class="card-foot">
+            <span class="mini-avatar">AR</span><span class="mini-avatar">JD</span><span class="mini-avatar">ML</span>
+            <span class="card-foot-text">3 shifts claimed today</span>
+          </div>
+        </div>
+        <img class="hero-phone" src="assets/app-phone.svg" alt="" width="320" height="640" loading="eager" />
+      </div>
+    </section>
+
+    <!-- ============ DEMO BAND (animated, no video file) ============ -->
+    <section class="section demo" id="demo" aria-label="Product demo">
+      <div class="demo-shell">
+        <div class="demo-toolbar" aria-hidden="true">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="demo-url">app.samayshift.com/schedule</span>
+        </div>
+        <!-- Drop a real walkthrough in here later:
+             <video src="assets/walkthrough.mp4" autoplay muted loop playsinline poster="assets/walkthrough-poster.jpg"></video>
+             Until then, this CSS-animated demo loops on its own. -->
+        <div class="demo-stage" aria-hidden="true">
+          <div class="demo-row">
+            <span class="demo-name">A. Rao</span>
+            <span class="demo-slot filled">Mon 8a</span>
+            <span class="demo-slot filled">Tue 8a</span>
+            <span class="demo-slot ghost">Wed</span>
+            <span class="demo-slot filled">Thu 8a</span>
+          </div>
+          <div class="demo-row">
+            <span class="demo-name">J. Diaz</span>
+            <span class="demo-slot ghost">Mon</span>
+            <span class="demo-slot filled">Tue 2p</span>
+            <span class="demo-slot filled">Wed 2p</span>
+            <span class="demo-slot ghost">Thu</span>
+          </div>
+          <div class="demo-row">
+            <span class="demo-name">Open</span>
+            <span class="demo-slot ghost">Mon</span>
+            <span class="demo-slot ghost">Tue</span>
+            <span class="demo-slot open-target">Wed 6a</span>
+            <span class="demo-slot ghost">Thu</span>
+          </div>
+          <!-- the traveling shift chip that gets "dragged" then "claimed" -->
+          <span class="demo-drag">Wed 6a</span>
+          <span class="demo-cursor"></span>
+          <span class="demo-toast">✓ Claimed by K. Smith</span>
+        </div>
+      </div>
+      <p class="demo-cap">A weekly schedule, built and claimed in real time.</p>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="section problem" id="problem">
+      <div class="section-head">
+        <p class="eyebrow">The 6am text-message scramble</p>
+        <h2>Spreadsheets weren't built for shifts.</h2>
+      </div>
+      <div class="problem-grid">
+        <article class="problem-card">
+          <span class="problem-num">01</span>
+          <h3>Spreadsheet chaos</h3>
+          <p>One change means re-sending the whole sheet. Versions multiply. Someone always works off the old one.</p>
+        </article>
+        <article class="problem-card">
+          <span class="problem-num">02</span>
+          <h3>No-shows &amp; missed swaps</h3>
+          <p>Swap requests live in group chats and get lost. A gap on Friday becomes a fire drill on Friday.</p>
+        </article>
+        <article class="problem-card">
+          <span class="problem-num">03</span>
+          <h3>Multi-store blind spots</h3>
+          <p>Run more than one location? There's no single view of who's covering what, where, this week.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ AI CONVERSATIONAL SCHEDULING ============ -->
+    <section class="section ai" id="ai">
+      <div class="ai-grid">
+        <div class="ai-copy">
+          <p class="eyebrow">Powered by AI · Beta</p>
+          <h2>Just say what you need.<br/>Get a schedule back.</h2>
+          <p class="ai-lede">
+            Describe the week in plain English — roles, hours, time-off, who pairs well together.
+            SamayShift AI drafts a full schedule in seconds, checks it for conflicts and coverage
+            gaps, and explains its choices. Tweak by chatting, then publish.
+          </p>
+          <ul class="ai-points">
+            <li><strong>Conversational.</strong> "Cover Mon–Fri mornings with two baristas, give Sara weekends off."</li>
+            <li><strong>Conflict-aware.</strong> It won't double-book or break availability or labor rules.</li>
+            <li><strong>You stay in control.</strong> Every AI draft is a proposal — review, adjust, publish.</li>
+          </ul>
+          <a href="#signup" class="btn btn-primary">Try AI scheduling free</a>
+        </div>
+
+        <!-- Animated chat "video" (self-playing, looping) -->
+        <div class="ai-chat" aria-label="AI scheduling demo">
+          <div class="chat-head" aria-hidden="true">
+            <span class="chat-spark">✦</span>
+            <span class="chat-title">SamayShift AI</span>
+            <span class="pill pill-ai">Beta</span>
+          </div>
+          <div class="chat-body" id="chatBody" aria-hidden="true">
+            <!-- messages injected by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section features" id="features">
+      <div class="section-head">
+        <p class="eyebrow">What you get</p>
+        <h2>Everything the schedule needs.<br/>Nothing it doesn't.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature wide">
+          <div class="feature-icon">🗓️</div>
+          <h3>Drag-and-drop scheduling</h3>
+          <p>Start from reusable weekly templates. Drop people into shifts, set required roles and headcount, and publish — draft to live in a couple of clicks.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">⚡</div>
+          <h3>Open shifts, claimed fairly</h3>
+          <p>Post an open shift; the first eligible team member to claim it gets it. A real lock prevents double-booking.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">🔁</div>
+          <h3>Swaps &amp; trades, with approval</h3>
+          <p>Staff request swaps or put a shift up for grabs. Managers approve in one tap — no more lost group-chat threads.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">📱</div>
+          <h3>An app your team will actually open</h3>
+          <p>iOS and Android. Staff see their schedule, get push notifications, and pick up shifts from their pocket.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon">✦</div>
+          <h3>AI scheduling assistant</h3>
+          <p>Describe the week in plain English and get a conflict-checked schedule back in seconds. Adjust by chatting, then publish.</p>
+        </article>
+        <article class="feature wide">
+          <div class="feature-icon">🏬</div>
+          <h3>Built for multi-store operators</h3>
+          <p>Business Groups give franchise and multi-brand owners one view across every location — with cross-store conflict detection so the same person isn't booked in two places.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ LEARN MORE / FULL CAPABILITIES ============ -->
+    <section class="section learn" id="learn">
+      <div class="section-head">
+        <p class="eyebrow">Learn more about the app</p>
+        <h2>A closer look under the hood.</h2>
+        <p class="section-lede">Everything SamayShift does, grouped by what you're trying to get done.</p>
+      </div>
+
+      <div class="learn-cols">
+        <div class="learn-col">
+          <h3 class="learn-cat">🗓️ Build the schedule</h3>
+          <ul class="learn-list">
+            <li>Reusable weekly <strong>shift templates</strong> (days, times, roles, headcount)</li>
+            <li>Generate schedules from templates in one click</li>
+            <li><strong>Draft → Published</strong> workflow with instant team notification</li>
+            <li>Required roles &amp; max-headcount enforcement per shift</li>
+            <li>AI-drafted schedules from a plain-English prompt</li>
+          </ul>
+        </div>
+
+        <div class="learn-col">
+          <h3 class="learn-cat">🤝 Coverage &amp; fairness</h3>
+          <ul class="learn-list">
+            <li><strong>Open shifts</strong> claimed first-come-first-served</li>
+            <li>Pessimistic locking prevents double-claims</li>
+            <li><strong>Up-for-grabs</strong> shifts any eligible teammate can take</li>
+            <li><strong>Direct trades</strong> between two employees, manager-approved</li>
+            <li>Eligibility &amp; availability checks before anyone is booked</li>
+          </ul>
+        </div>
+
+        <div class="learn-col">
+          <h3 class="learn-cat">📱 For your team</h3>
+          <ul class="learn-list">
+            <li>Native <strong>iOS &amp; Android</strong> apps + web</li>
+            <li><strong>Push notifications</strong> with email fallback</li>
+            <li>Self-serve schedule, swaps, and time-off from the phone</li>
+            <li>Personal calendar view of upcoming shifts</li>
+          </ul>
+        </div>
+
+        <div class="learn-col">
+          <h3 class="learn-cat">🏬 For owners &amp; multi-store</h3>
+          <ul class="learn-list">
+            <li><strong>Business Groups</strong> — one view across every location</li>
+            <li><strong>Cross-store conflict detection</strong></li>
+            <li>Role-based access: Owner ▸ Manager ▸ Team Member</li>
+            <li>Per-store ownership &amp; tenant isolation (your data stays yours)</li>
+            <li>Approvals routed to the right manager automatically</li>
+          </ul>
+        </div>
+
+        <div class="learn-col">
+          <h3 class="learn-cat">🔒 Trust &amp; reliability</h3>
+          <ul class="learn-list">
+            <li>Secure sign-in with industry-standard JWT auth</li>
+            <li>Cloud-native on AWS — multi-AZ, built to stay up</li>
+            <li>Encrypted in transit; least-privilege access</li>
+            <li>Audit-friendly approval trails</li>
+          </ul>
+        </div>
+
+        <div class="learn-col">
+          <h3 class="learn-cat">✦ AI assistance</h3>
+          <ul class="learn-list">
+            <li>Conversational schedule drafting</li>
+            <li>Conflict &amp; coverage-gap explanations in plain English</li>
+            <li>Chat-to-adjust: refine a draft by asking</li>
+            <li>You approve every proposal before it's published</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="learn-cta">
+        <a href="#signup" class="btn btn-primary">Start free trial</a>
+        <a href="#demo" class="btn btn-ghost">Watch the demo →</a>
+      </div>
+    </section>
+
+    <!-- ============ INTEGRATIONS ============ -->
+    <section class="section integrations" id="integrations">
+      <div class="section-head">
+        <p class="eyebrow">Works with your stack</p>
+        <h2>Plays nicely with the tools you already run. <span class="soon-badge">Coming soon</span></h2>
+        <p class="section-lede">Integrations are on the way. SamayShift is built for the small businesses that run on QuickBooks — and will connect to the rest of your day-to-day.</p>
+      </div>
+
+      <!-- QuickBooks: the hero integration -->
+      <article class="integration-hero">
+        <div class="integration-hero-mark">
+          <img src="assets/logo-quickbooks.svg" alt="QuickBooks" width="56" height="56" />
+        </div>
+        <div class="integration-hero-copy">
+          <span class="integration-tag">Featured integration</span>
+          <h3>QuickBooks</h3>
+          <p>The scheduling layer QuickBooks doesn't include. Sync your employees and stores, line up worked shifts with payroll, and keep one source of truth for who worked when — no double entry.</p>
+          <ul class="integration-bullets">
+            <li>Import employees &amp; locations</li>
+            <li>Hours ready for payroll</li>
+            <li>One team roster across both</li>
+          </ul>
+        </div>
+      </article>
+
+      <div class="integration-grid">
+        <div class="integration-card"><span class="integration-ic">📅</span><h4>Google &amp; Apple Calendar</h4><p>Shifts on every employee's personal calendar.</p></div>
+        <div class="integration-card"><span class="integration-ic">💬</span><h4>WhatsApp &amp; SMS</h4><p>Shift alerts and reminders where your team already is.</p></div>
+        <div class="integration-card"><span class="integration-ic">📧</span><h4>Email</h4><p>Reliable fallback notifications for every event.</p></div>
+        <div class="integration-card"><span class="integration-ic">⏱️</span><h4>Time &amp; attendance</h4><p>Line up scheduled vs. worked hours.</p></div>
+        <div class="integration-card"><span class="integration-ic">🔌</span><h4>Open API &amp; webhooks</h4><p>Build your own connections to anything else.</p></div>
+        <div class="integration-card integration-card--more"><span class="integration-ic">＋</span><h4>More on the way</h4><p>Tell us what you need next.</p></div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section how" id="how">
+      <div class="section-head">
+        <p class="eyebrow">From zero to published</p>
+        <h2>Three steps. One coffee.</h2>
+      </div>
+      <ol class="steps">
+        <li class="step">
+          <span class="step-num">1</span>
+          <h3>Create a template</h3>
+          <p>Set your weekly pattern once — days, times, roles, and how many people each shift needs.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">2</span>
+          <h3>Publish the week</h3>
+          <p>Generate the schedule from your template, fill it in, and publish. Everyone's notified instantly.</p>
+        </li>
+        <li class="step">
+          <span class="step-num">3</span>
+          <h3>Let the team self-serve</h3>
+          <p>Staff claim open shifts, request swaps, and check the schedule on mobile. You approve and move on.</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="section pricing" id="pricing">
+      <div class="section-head">
+        <p class="eyebrow">Simple, honest pricing</p>
+        <h2>Pay for what you run.</h2>
+        <p class="section-lede">Start free for 14 days. No card to try. Cancel anytime.</p>
+      </div>
+      <div class="price-grid">
+
+        <article class="price-card">
+          <h3 class="price-name">Starter</h3>
+          <p class="price-for">A single shop</p>
+          <p class="price-amt"><span class="price-num">$15</span><span class="price-unit">/ store / mo</span></p>
+          <p class="price-flat">Flat rate. Unlimited employees at that store.</p>
+          <ul class="price-list">
+            <li>Drag-and-drop scheduling</li>
+            <li>Open shifts &amp; swaps</li>
+            <li>Mobile app for staff</li>
+            <li>Email &amp; push notifications</li>
+          </ul>
+          <a href="#signup" class="btn btn-outline price-cta">Start free trial</a>
+        </article>
+
+        <article class="price-card price-card--featured">
+          <span class="price-badge">Most popular</span>
+          <h3 class="price-name">Growth</h3>
+          <p class="price-for">Multi-store operators</p>
+          <p class="price-amt"><span class="price-num">$2.50</span><span class="price-unit">/ employee / mo</span></p>
+          <p class="price-flat">Billed per business group. Scales as your team does.</p>
+          <ul class="price-list">
+            <li>Everything in Starter</li>
+            <li>Unlimited stores in one Business Group</li>
+            <li>Cross-store conflict detection</li>
+            <li>One dashboard across all locations</li>
+            <li>Role-based access for managers</li>
+          </ul>
+          <a href="#signup" class="btn btn-primary price-cta">Start free trial</a>
+        </article>
+
+        <article class="price-card">
+          <h3 class="price-name">Enterprise</h3>
+          <p class="price-for">Franchises &amp; brands</p>
+          <p class="price-amt"><span class="price-num">Let's talk</span></p>
+          <p class="price-flat">Custom terms for larger operations.</p>
+          <ul class="price-list">
+            <li>Everything in Growth</li>
+            <li>SSO &amp; advanced security</li>
+            <li>Priority support &amp; onboarding</li>
+            <li>Volume pricing</li>
+          </ul>
+          <a href="#signup" class="btn btn-outline price-cta">Contact sales</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="section cta-band" id="signup">
+      <div class="cta-inner">
+        <h2>Give your team back their Sunday nights.</h2>
+        <p>Set up your first schedule in under ten minutes. Free for 14 days.</p>
+        <form class="cta-form" onsubmit="return false;">
+          <input type="email" inputmode="email" autocomplete="email" placeholder="you@yourbusiness.com" aria-label="Work email" required />
+          <button type="submit" class="btn btn-primary">Start free trial</button>
+        </form>
+        <p class="cta-fine">No credit card required. We'll never share your email.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-brand">
+      <span class="brand-name">Samay<span class="brand-accent">Shift</span></span>
+      <p>Scheduling that respects everyone's time.</p>
+    </div>
+    <nav class="footer-cols" aria-label="Footer">
+      <div>
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how">How it works</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Blog</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </div>
+    </nav>
+    <p class="footer-copy">© 2026 SamayShift. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Staggered reveal on load + on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.section, .problem-card, .feature, .step, .price-card').forEach(el => io.observe(el));
+
+    /* ---------- AI chat demo: self-playing, looping ---------- */
+    (function () {
+      const body = document.getElementById('chatBody');
+      if (!body) return;
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      const userText = "Cover Mon–Fri, 6a–2p, two baristas. Give Sara weekends off.";
+      const aiIntro  = "Done — here's a draft for next week:";
+      const grid = [
+        ['Mon', 'A. Rao', 'J. Diaz'],
+        ['Tue', 'M. Lee', 'A. Rao'],
+        ['Wed', 'J. Diaz', 'K. Smith'],
+        ['Thu', 'A. Rao', 'M. Lee'],
+        ['Fri', 'K. Smith', 'J. Diaz'],
+      ];
+      const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+      function el(cls, html) { const d = document.createElement('div'); d.className = cls; if (html) d.innerHTML = html; return d; }
+
+      async function typeInto(node, text, speed) {
+        for (let i = 0; i < text.length; i++) { node.textContent = text.slice(0, i + 1); await sleep(speed); }
+      }
+
+      async function play() {
+        body.innerHTML = '';
+
+        // User bubble — types in
+        const u = el('msg msg-user'); const uT = el('bubble'); u.appendChild(uT); body.appendChild(u);
+        if (prefersReduced) { uT.textContent = userText; } else { await typeInto(uT, userText, 24); }
+        await sleep(prefersReduced ? 0 : 500);
+
+        // AI typing indicator
+        const typing = el('msg msg-ai');
+        typing.appendChild(el('bubble bubble-typing', '<span></span><span></span><span></span>'));
+        body.appendChild(typing); body.scrollTop = body.scrollHeight;
+        await sleep(prefersReduced ? 0 : 1400);
+        typing.remove();
+
+        // AI intro bubble
+        const a = el('msg msg-ai'); const aT = el('bubble'); aT.textContent = aiIntro; a.appendChild(aT); body.appendChild(a);
+
+        // AI proposed schedule card — rows reveal one by one
+        const card = el('msg msg-ai');
+        const sched = el('bubble bubble-sched');
+        const head = el('sched-head', '<span>Proposed · Maple St.</span><span class="sched-ok">✓ No conflicts</span>');
+        sched.appendChild(head);
+        const rows = el('sched-rows'); sched.appendChild(rows);
+        card.appendChild(sched); body.appendChild(card); body.scrollTop = body.scrollHeight;
+
+        for (const [day, a1, a2] of grid) {
+          const r = el('sched-row',
+            `<span class="sd">${day}</span><span class="sc">${a1}</span><span class="sc">${a2}</span>`);
+          rows.appendChild(r);
+          body.scrollTop = body.scrollHeight;
+          await sleep(prefersReduced ? 0 : 280);
+        }
+
+        const actions = el('sched-actions',
+          '<button class="sched-btn primary">Publish</button><button class="sched-btn">Adjust</button>');
+        sched.appendChild(actions);
+        body.scrollTop = body.scrollHeight;
+
+        // hold, then loop
+        await sleep(prefersReduced ? 4000 : 3600);
+        if (!prefersReduced) play();
+      }
+
+      // Start when the section scrolls into view (once), then it self-loops
+      const start = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) { start.disconnect(); play(); }
+      }, { threshold: 0.3 });
+      start.observe(document.getElementById('ai'));
+    })();
+  </script>
+</body>
+</html>
