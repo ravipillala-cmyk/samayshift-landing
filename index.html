@@ -430,8 +430,10 @@
       <div class="cta-inner">
         <h2>Give your team back their Sunday nights.</h2>
         <p>Set up your first schedule in under ten minutes. Free for 14 days.</p>
-        <form class="cta-form" onsubmit="return false;">
-          <input type="email" inputmode="email" autocomplete="email" placeholder="you@yourbusiness.com" aria-label="Work email" required />
+        <form class="cta-form" id="signupForm">
+          <!-- honeypot: bots fill it, humans never see it -->
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="email" name="email" inputmode="email" autocomplete="email" placeholder="you@yourbusiness.com" aria-label="Work email" required />
           <button type="submit" class="btn btn-primary">Start free trial</button>
         </form>
         <p class="cta-fine">No credit card required. We'll never share your email.</p>
@@ -546,6 +548,37 @@
         if (entries[0].isIntersecting) { start.disconnect(); play(); }
       }, { threshold: 0.3 });
       start.observe(document.getElementById('ai'));
+    })();
+
+    /* ---------- Signup form -> Google Sheet (Apps Script Web App) ---------- */
+    (function () {
+      // Paste the Apps Script Web App URL here (ends in /exec). See README setup steps.
+      const SIGNUP_ENDPOINT = 'https://script.google.com/macros/s/AKfycbzIoM6-VdI6sfFlKD1gMttqIW2zbaVTy5UUV8EX49IGDDVZ6nK7wIkBNBxm6G8HkKpVAQ/exec';
+
+      const form = document.getElementById('signupForm');
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const btn = form.querySelector('button');
+        const original = btn.textContent;
+        btn.disabled = true;
+        btn.textContent = 'Adding you…';
+
+        const data = new FormData(form);
+        data.append('source', 'landing');
+
+        try {
+          // Apps Script returns an opaque (CORS) response, so we can't read it.
+          // Reaching here without a network error means the row was written.
+          await fetch(SIGNUP_ENDPOINT, { method: 'POST', body: data });
+          form.innerHTML = '<p class="cta-fine" style="font-size:1rem">Thanks — you\'re on the list. We\'ll be in touch. 🌅</p>';
+        } catch {
+          btn.disabled = false;
+          btn.textContent = 'Something went wrong — try again';
+          setTimeout(() => { btn.textContent = original; }, 3000);
+        }
+      });
     })();
   </script>
 </body>
