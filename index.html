@@ -12,6 +12,16 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://samayshift.com" />
   <meta property="og:image" content="https://samayshift.com/assets/og-image.png" />
+  <meta property="og:site_name" content="SamayShift" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SamayShift — Scheduling that respects everyone's time" />
+  <meta name="twitter:description" content="Mobile-first shift scheduling for small businesses. Build schedules in minutes; staff claim and swap shifts from their phones." />
+  <meta name="twitter:image" content="https://samayshift.com/assets/og-image.png" />
+
+  <link rel="canonical" href="https://samayshift.com/" />
+  <meta name="robots" content="index, follow" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -19,6 +29,86 @@
   <!-- Display: Fraunces (characterful serif). Body: Public Sans (clean grotesque). -->
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured data: SoftwareApplication + Organization for SEO rich results and AI answer engines (GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "SamayShift",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, iOS, Android",
+        "url": "https://samayshift.com/",
+        "description": "Mobile-first shift scheduling for small businesses. Build schedules in minutes, let staff claim and swap shifts from their phones, and manage multiple stores from one dashboard. Integrates with QuickBooks.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Starter",
+            "price": "15.00",
+            "priceCurrency": "USD",
+            "description": "Per store, per month. Flat rate with unlimited employees at that store."
+          },
+          {
+            "@type": "Offer",
+            "name": "Growth",
+            "price": "2.50",
+            "priceCurrency": "USD",
+            "description": "Per employee, per month, billed per business group. Unlimited stores, cross-store conflict detection, one dashboard."
+          }
+        ]
+      },
+      {
+        "@type": "Organization",
+        "name": "SamayShift",
+        "url": "https://samayshift.com/",
+        "logo": "https://samayshift.com/assets/og-image.png",
+        "description": "Shift-scheduling software for small businesses and multi-store operators."
+      }
+    ]
+  }
+  </script>
+
+  <!-- FAQ structured data: mirrors the visible #faq section; helps Google rich results + AI answer engines (GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does SamayShift cost?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Starter is $15 per store per month with unlimited employees at that store. Growth is $2.50 per employee per month, billed per business group, with unlimited stores. Enterprise pricing is custom — contact sales. Every plan starts with a 14-day free trial, no credit card required." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does SamayShift work with QuickBooks?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. QuickBooks is our featured integration, built for small-business teams that already run their books there." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can staff claim and swap shifts themselves?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Managers publish the schedule; employees can claim open shifts and request swaps or trades from the mobile app. Swaps and trades route to a manager for approval, so coverage stays under control." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I manage more than one location?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes — that's what the Growth plan is for. Run unlimited stores under one business group, with cross-store conflict detection and a single dashboard across all locations." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a mobile app?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, for iOS and Android. Staff get their schedule, open shifts, and swap requests on their phone, with push notifications." }
+      },
+      {
+        "@type": "Question",
+        "name": "What about the AI scheduling assistant and other integrations?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The AI scheduling assistant and integrations beyond QuickBooks (calendar, messaging, time & attendance, and an open API) are on our roadmap — not yet generally available. We'll announce them as they ship." }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -425,6 +515,40 @@
       </div>
     </section>
 
+    <!-- ============ FAQ ============ -->
+    <section class="section faq" id="faq">
+      <div class="section-head">
+        <p class="eyebrow">Questions, answered</p>
+        <h2>The short version.</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>How much does SamayShift cost?</summary>
+          <p>Starter is $15 per store per month with unlimited employees at that store. Growth is $2.50 per employee per month, billed per business group, with unlimited stores. Enterprise pricing is custom — contact sales. Every plan starts with a 14-day free trial, no credit card required.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does SamayShift work with QuickBooks?</summary>
+          <p>Yes. QuickBooks is our featured integration, built for small-business teams that already run their books there.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can staff claim and swap shifts themselves?</summary>
+          <p>Yes. Managers publish the schedule; employees can claim open shifts and request swaps or trades from the mobile app. Swaps and trades route to a manager for approval, so coverage stays under control.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I manage more than one location?</summary>
+          <p>Yes — that's what the Growth plan is for. Run unlimited stores under one business group, with cross-store conflict detection and a single dashboard across all locations.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is there a mobile app?</summary>
+          <p>Yes, for iOS and Android. Staff get their schedule, open shifts, and swap requests on their phone, with push notifications.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What about the AI scheduling assistant and other integrations?</summary>
+          <p>The AI scheduling assistant and integrations beyond QuickBooks (calendar, messaging, time &amp; attendance, and an open API) are on our roadmap — not yet generally available. We'll announce them as they ship.</p>
+        </details>
+      </div>
+    </section>
+
     <!-- ============ FINAL CTA ============ -->
     <section class="section cta-band" id="signup">
       <div class="cta-inner">
@@ -453,6 +577,7 @@
         <a href="#features">Features</a>
         <a href="#pricing">Pricing</a>
         <a href="#how">How it works</a>
+        <a href="#faq">FAQ</a>
       </div>
       <div>
         <h4>Company</h4>
